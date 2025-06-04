@@ -113,8 +113,17 @@ services:
     volumes:
       - ./data:/data
 
+  class-comuna:
+    build: ./class-comuna
+    container_name: class-comuna
+    depends_on:
+      - pig-filter
+    volumes:
+      - ./data:/data
+
 volumes:
   mongo_data:
   redis_data:
   metabase-data:
+
 
